@@ -1,6 +1,6 @@
 package com.example.testevaluation;
 
-public class Assessment {
+public class Assessment implements Serializable {
     public String questions[];
     public String answers[];
     public int score;
