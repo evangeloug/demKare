@@ -12,17 +12,15 @@ public class DementiaInfo {
         return "three";
     }
 
-    public void informationAboutDementia(int level){
+    public String informationAboutDementia(int level){
         switch (level) {
             case 1:
-                levelOne();
-                break;
+                return levelOne();
             case 2:
-                levelTow();
-                break;
+                 return levelTow();
             case 3:
-                levelThree();
-                break;
+                return levelThree();
         }
+        return null;
     }
 }
