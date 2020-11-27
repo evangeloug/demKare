@@ -69,20 +69,6 @@ public class PatientList extends AppCompatActivity {
             linear.removeAllViews();
             for(int i = 0; i< PatientList.patients.size(); i++) {
 
-//                Button btnTag = new Button(this);
-//                btnTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-//                btnTag.setText(MainActivity.patients.get(i));
-//                btnTag.setId(View.generateViewId());
-//                btnTag.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        //Transition To Patient
-//                    }
-//                });
-//
-//                //add button to the layout
-//                linear.addView(btnTag);
-
                 final View view = getLayoutInflater().inflate(R.layout.patient_list_row, null);
                 String displayname = "";
                 if(PatientList.patients.get(i).equals("george01")) {
@@ -152,7 +138,13 @@ public class PatientList extends AppCompatActivity {
                     });
                 }
                 ((TextView) view.findViewById(R.id.textView3)).setText(displayname);
-
+                ((TextView) view.findViewById(R.id.textView3)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(PatientList.this, MainMenu.class);
+                        startActivity(intent);
+                    }
+                });
 
                 linear.addView(view);
             }
