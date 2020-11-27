@@ -22,17 +22,17 @@ public class EditPatientList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_patient_list);
 
-        editName = findViewById(R.id.editTextTextPersonName);
-        TextView myAwesomeTextView = (TextView)findViewById(R.id.textView2);
+        editName = findViewById(R.id.editListName);
+        TextView myAwesomeTextView = (TextView)findViewById(R.id.patientUserEdit);
 
-        LinearLayout linear = (LinearLayout) findViewById(R.id.linear2);
+        LinearLayout linear = (LinearLayout) findViewById(R.id.editPatientListLinear);
         for(int i = 0; i< PatientList.patients.size(); i++){
 
             final int finalI = i;
 
             final View view = getLayoutInflater().inflate(R.layout.patient_item, null);
-            ((TextView) view.findViewById(R.id.textView2)).setText(PatientList.patients.get(i));
-            ((Button) view.findViewById(R.id.button3)).setOnClickListener(new View.OnClickListener() {
+            ((TextView) view.findViewById(R.id.patientUserEdit)).setText(PatientList.patients.get(i));
+            ((Button) view.findViewById(R.id.patientDeleteButton)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     view.setVisibility(View.GONE);
@@ -40,7 +40,7 @@ public class EditPatientList extends AppCompatActivity {
                 }
             });
 
-            ((Button) view.findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
+            ((Button) view.findViewById(R.id.patientEditButton)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Edit Patient
