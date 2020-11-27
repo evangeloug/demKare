@@ -7,7 +7,7 @@
     tools:context=".EditPatientList">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/patientListText"
         android:layout_width="413dp"
         android:layout_height="50dp"
         android:text="@string/edit_patient_list"
@@ -27,17 +27,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+        app:layout_constraintTop_toBottomOf="@+id/editListName">
 
         <LinearLayout
-            android:id="@+id/linear2"
+            android:id="@+id/editPatientListLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editListName"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:layout_marginTop="48dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addPatientButton"
         android:layout_width="118dp"
         android:layout_height="40dp"
         android:layout_marginTop="48dp"
