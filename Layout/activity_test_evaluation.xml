@@ -67,7 +67,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
-        android:text="Where are we now? State? County? Town/city? Hospital? Floor?"
+        android:text="Where are we now? State? Country? Town/city? Hospital? Floor?"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toTopOf="@+id/txt_answer2"
         app:layout_constraintEnd_toEndOf="parent"
