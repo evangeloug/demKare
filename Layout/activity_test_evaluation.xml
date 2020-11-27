@@ -8,6 +8,7 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
@@ -16,6 +17,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="32dp"
+        android:background="#4CAF50"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +105,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:layout_marginBottom="34dp"
-        android:text="The examiner names three unrelated objects clearly and slowly, then the instructor asks the patient to name all three of them. The patient’s response is used for scoring. The examiner repeats them until patient learns all of them, if possible."
+        android:text="The examiner names three unrelated objects clearly and slowly, then the instructor asks the patient to name all three of them. The patientâ€™s response is used for scoring. The examiner repeats them until patient learns all of them, if possible."
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toTopOf="@+id/txt_answer3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,6 +141,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="#4CAF50"
         android:text="Caregiver"
         app:layout_constraintBottom_toTopOf="@+id/txt_question1"
         app:layout_constraintEnd_toEndOf="parent"
