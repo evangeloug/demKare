@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Dementia</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">sign up</string>
+    <string name="username">username</string>
+    <string name="first_name_signup">first name</string>
+    <string name="last_name_signup">last name</string>
+    <string name="telephone_signup">telephone</string>
+    <string name="password_signup">password</string>
+    <string name="email_signup">email</string>
+    <string name="caregiver_signup">caregiver</string>
+    <string name="done_signup">Done</string>
+    <string name="date_signup">birthdate</string>
+
+
+    <string name="saveButton">Save Changes</string>
+    <string name="hiText">Hello</string>
+    <string name="addButton">Add Button</string>
+    <string name="editButton">Edit Button</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordVerificationLabel">Password Verification</string>
+    <string name="editEmailText">e.g. example@domain.com</string>
+    <string name="editPasswordText">Password</string>
+    <string name="editPhoneText">Phone</string>
+    <string name="editUsernameText">Username</string>
+    <string name="deleteButton">Delete Button</string>
+    <string name="setPicButton">Select Picture</string>
+    <string name="nameMessage">Name</string>
+    <string name="descriptionMessage">Description (optional)</string>
+    <string name="showDescriptionMessage">Show Description</string>
+    <string name="categoryMessage">Category</string>
+    <string name="likeListPictureMessage">Like List Item Picture</string>
+    <string-array name="likeListCategory">
+        <item>General</item>
+        <item>Food</item>
+        <item>Music</item>
+        <item>Places</item>
+        <item>Things to do</item>
+        <item>Sports</item>
+        <item>Cars</item>
+    </string-array>
+
+</resources>
