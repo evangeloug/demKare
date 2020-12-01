@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -79,9 +78,9 @@ public class MainMenu extends AppCompatActivity {
                         Intent intent = new Intent(MainMenu.this, ThingsList.class);
                         startActivity(intent);
                     }
-                    // Things to remember
+                    // Dementia info
                     if (finalI == 4) {
-                        Intent intent = new Intent(MainMenu.this, ReadAboutDementia.class);
+                        Intent intent = new Intent(MainMenu.this, TestEvaluation.class);
                         startActivity(intent);
                     }
                     // Like list
@@ -89,9 +88,9 @@ public class MainMenu extends AppCompatActivity {
                         Intent intent = new Intent(MainMenu.this, LikeList.class);
                         startActivity(intent);
                     }
-                    // Like list
+                    // Assessment
                     else if (finalI == 6) {
-                        Intent intent = new Intent(MainMenu.this, TestEvaluation.class);
+                        Intent intent = new Intent(MainMenu.this, ReadAboutDementia.class);
                         startActivity(intent);
                     }
                 }
