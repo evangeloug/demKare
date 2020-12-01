@@ -1,9 +1,10 @@
-package com.example.list;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class EditPatientList extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class EditPatientList extends AppCompatActivity {
 
             final View view = getLayoutInflater().inflate(R.layout.patient_item, null);
             ((TextView) view.findViewById(R.id.patientUserEdit)).setText(PatientList.patients.get(i));
-            ((Button) view.findViewById(R.id.patientDeleteButton)).setOnClickListener(new View.OnClickListener() {
+            ((FloatingActionButton) view.findViewById(R.id.patientDeleteButton)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     view.setVisibility(View.GONE);
@@ -40,15 +43,86 @@ public class EditPatientList extends AppCompatActivity {
                 }
             });
 
-            ((Button) view.findViewById(R.id.patientEditButton)).setOnClickListener(new View.OnClickListener() {
+            final int finalI1 = i;
+            ((FloatingActionButton) view.findViewById(R.id.patientEditButton)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Edit Patient
+                    if(PatientList.patients.get(finalI1).equals("george01")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Giorgos Mixail");
+                        intent.putExtra("email", "george01@gmail.com");
+                        intent.putExtra("phone", "99854815");
+                        intent.putExtra("username", "george01");
+                        intent.putExtra("password", "dafdSA3f");
+
+                        startActivityForResult(intent, 99);
+                    }
+
+                    if(PatientList.patients.get(finalI1).equals("petros33")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Petros Georgiou");
+                        intent.putExtra("email", "petros33@gmail.com");
+                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("username", "petros33");
+                        intent.putExtra("password", "F32gDadasd");
+
+                        startActivityForResult(intent, 99);
+                    }
+
+                    if(PatientList.patients.get(finalI1).equals("kostas88")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Konstantinos Kyriakou");
+                        intent.putExtra("email", "kostas88@gmail.com");
+                        intent.putExtra("phone", "99237467");
+                        intent.putExtra("username", "kostas88");
+                        intent.putExtra("password", "£FASsd231");
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    if(PatientList.patients.get(finalI1).equals("alois2")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Andreas Loizou");
+                        intent.putExtra("email", "alois2@gmail.com");
+                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("username", "alois2");
+                        intent.putExtra("password", "FSavsdfe2");
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    if(PatientList.patients.get(finalI1).equals("cpro")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Constantinos Prokopiou");
+                        intent.putExtra("email", "cpro@gmail.com");
+                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("username", "cpro");
+                        intent.putExtra("password", "2g45241");
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    else {
+                        String email = PatientList.patients.get(finalI1) + "gmail.com";
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Marios Petrou");
+                        intent.putExtra("email", email);
+                        intent.putExtra("phone", "99356137");
+                        intent.putExtra("username", PatientList.patients.get(finalI1));
+                        intent.putExtra("password", "213fsSfdD");
+
+                        startActivityForResult(intent, 99);
+                    }
                 }
             });
 
 
-            linear.addView(view);
+            if(PatientList.patients.get(i).equals("blank"));
+            else
+                linear.addView(view);
         }
 
     }
@@ -69,15 +143,5 @@ public class EditPatientList extends AppCompatActivity {
             finish();
         }
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        String name = data.getStringExtra("test");
-        Log.v("sss",name);
-
-    }
-
 
 }
