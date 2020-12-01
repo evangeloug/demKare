@@ -1,4 +1,4 @@
-package com.example.demKare;
+package com.example.reminders;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.example.demKare;
+package com.example.reminders;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -64,9 +64,9 @@ public class ReminderList extends AppCompatActivity {
                 vid.setMediaController(med);
                 med.setAnchorView(vid);
                 if(video==1)
-                    vid.setVideoURI(Uri.parse("android.resource://" + getApplicationInfo().packageName + "/"+R.raw.doctor));
+                vid.setVideoURI(Uri.parse("android.resource://" + getApplicationInfo().packageName + "/"+R.raw.doctor));
                 else if (video==2)
-                    vid.setVideoURI(Uri.parse("android.resource://" + getApplicationInfo().packageName + "/"+R.raw.dementia));
+                vid.setVideoURI(Uri.parse("android.resource://" + getApplicationInfo().packageName + "/"+R.raw.dementia));
                 if (vid.isPlaying())
                     vid.start();
             }

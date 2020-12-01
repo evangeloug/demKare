@@ -1,4 +1,4 @@
-package com.example.demKare;
+package com.example.reminders;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,10 +54,11 @@ public class EditReminder extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (videoPath == null && getIntent().getIntExtra("requestCode", -1) == -1) {
+                if (date.getText().toString().length() > 0 || time.getText().toString().length() > 0 || nameText.getText().toString().length() > 0 ||
+                        videoPath == null && getIntent().getIntExtra("requestCode", -1) == -1) {
                     AlertDialog.Builder err = new AlertDialog.Builder(EditReminder.this);
-                    err.setTitle("No video selected!!");
-                    err.setMessage("Please select video to continue");
+                    err.setTitle("All fields must be completed and video selected!!");
+                    err.setMessage("Please complete the uncompleted fields and/or select a video to continue");
                     err.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -67,7 +68,7 @@ public class EditReminder extends AppCompatActivity {
                     err.show();
                 } else {
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("name", nameText.getText().toString() + ", " + spinner.getSelectedItem().toString()+", "+
+                    bundle.putSerializable("name", nameText.getText().toString() + ", " + spinner.getSelectedItem().toString() + ", " +
                             date.getText().toString() + ", " + time.getText().toString());
                     bundle.putSerializable("video", videoPath);
                     Intent intent = new Intent();
@@ -108,11 +109,11 @@ public class EditReminder extends AppCompatActivity {
             date.setText(arr[2]);
             time.setText(arr[3]);
             int id;
-            String selected=arr[1];
-            if(selected.equals(" General")) id=0;
-            else if(selected.equals(" Today's")) id=1;
-            else id=2;
-            spinner.setSelection(id,true);
+            String selected = arr[1];
+            if (selected.equals(" General")) id = 0;
+            else if (selected.equals(" Today's")) id = 1;
+            else id = 2;
+            spinner.setSelection(id, true);
         }
         return intent.getIntExtra("requestCode", -1);
     }
