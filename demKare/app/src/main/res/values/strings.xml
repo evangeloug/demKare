@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">demKare</string>
+
+    <string name="mmLogoutImg">Logout icon</string>
+    <string name="mmContactsImg">Contacts icon</string>
+    <string name="mmPeopleImg">People to remember icon</string>
+    <string name="mmRemindersImg">Reminders icon</string>
+    <string name="mmThingsImg">Things to remember icon</string>
+    <string name="mmDemInfoImg">Dementia info icon</string>
+    <string name="mmLikesImg">Like list icon</string>
+    <string name="mmAssessmentImg">Assessment icon</string>
+    <string name="mmTitle">PATIENT MAIN MENU</string>
+    <string name="mmContacts">Contacts</string>
+    <string name="mmPeople">People to Remember</string>
+    <string name="mmReminders">Reminders</string>
+    <string name="mmThings">Things to Remember</string>
+    <string name="mmDemInfo">Dementia Info</string>
+    <string name="mmLikes">What I Like</string>
+    <string name="mmAssessment">Assessment</string>
+    <string name="rememberedPersonImg">Person picture</string>
+    <string name="surnameMessage">Surname*</string>
+    <string name="relationshipMessage">Relationship with person*</string>
+    <string name="phoneMessage">Phone number*</string>
+    <string name="callButton">Call button</string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="first_name_signup">first name</string>
+    <string name="last_name_signup">last name</string>
+    <string name="telephone_signup">telephone</string>
+    <string name="password_signup">password</string>
+    <string name="email_signup">email</string>
+    <string name="caregiver_signup">caregiver</string>
+    <string name="done_signup">Done</string>
+    <string name="date_signup">birthdate</string>
+
+    <string name="saveButton">Save Changes</string>
+    <string name="hiText">Hello</string>
+    <string name="addButton">Add Button</string>
+    <string name="editButton">Edit Button</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordVerificationLabel">Password Verification</string>
+    <string name="editEmailText">e.g. example@domain.com</string>
+    <string name="editPasswordText">Password</string>
+    <string name="editPhoneText">Phone</string>
+    <string name="editUsernameText">Username</string>
+    <string name="deleteButton">Delete Button</string>
+    <string name="setPicButton">Select Picture</string>
+    <string name="nameMessage">Name*</string>
+    <string name="descriptionMessage">Description (optional)</string>
+    <string name="showDescriptionMessage">Show Description</string>
+    <string name="categoryMessage">Category</string>
+    <string name="likeListPictureMessage">Like List Item Picture</string>
+    <string-array name="likeListCategory">
+        <item>General</item>
+        <item>Food</item>
+        <item>Music</item>
+        <item>Places</item>
+        <item>Things to do</item>
+        <item>Sports</item>
+        <item>Cars</item>
+    </string-array>
+    <string name="add_patient">Add Patient</string>
+    <string name="edit_patient_list">Edit Patient List</string>
+    <string name="name">Name</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="textview">TextView</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <string name="general">Dementia is not a single disease; it’s an overall
+        term — like heart disease — that covers a wide range of specific medical
+        conditions, including Alzheimer’s disease. Disorders grouped under the general
+        term “dementia” are caused by abnormal brain changes. These changes trigger
+        a decline in thinking skills, also known as cognitive abilities, severe
+        enough to impair daily life and independent function. They also affect behavior, feelings and relationships</string>
+    <string name="levels">Health professionals often discuss dementia in “stages,” which refers to how far
+        a person’s dementia or Alzheimer’s disease has progressed. Defining the stage helps physicians
+        determine best treatments and aids communication between doctors and caregivers. Dementia is usually
+        considered as three stages: mild (or “early”), moderate (or “middle”), and severe (or “late”).
+        A more specific stage of dementia, however, is commonly assigned based on symptoms.
+It can also be helpful to know how symptoms change over stages. Alzheimer’s and similar diseases can cause
+        dramatic swings in mood and behavior, and the activities a person is physically able to do will
+        change as dementia progresses. This causes stress for friends and relatives, but knowing what’s
+        coming can help prepare for social, medical, and personal needs.
+    Rather than simply using “early stage,” “middle-stage,” and “late-stage” dementia as descriptors,
+        there are scales that provide a more comprehensive description. These scales help better understand
+        the different stages of Alzheimer’s disease based on how well a person thinks (cognitive decline)
+        and functions (physical abilities). These scales are the Global Deterioration Scale for Assessment
+        of Primary Degenerative Dementia, the Functional Assessment Staging Test, and the Clinical Dementia Rating</string>
+    <string name="SAVE">SAVE</string>
+    <string name="reminder_name">Reminder name</string>
+    <string name="date_dd_mm_yyyy">Date dd/mm/yyyy</string>
+    <string name="time_hh_mm">Time hh:mm</string>
+    <string name="choose_video">Choose Video</string>
+    <string-array name="categories">
+        <item>General</item>
+        <item>"Today's"</item>
+        <item>Daily</item>
+    </string-array>
+
+
+
+
+
+</resources>
