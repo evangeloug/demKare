@@ -27,4 +27,11 @@
         <item>Sports</item>
         <item>Cars</item>
     </string-array>
+    <string name="add_patient">Add Patient</string>
+    <string name="edit_patient_list">Edit Patient List</string>
+    <string name="name">Name</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="textview">TextView</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>
