@@ -152,7 +152,9 @@ public class PatientList extends AppCompatActivity {
                     }
                 });
 
-                linear.addView(view);
+                if(PatientList.patients.get(i).equals("blank"));
+                else
+                    linear.addView(view);
             }
 
 
