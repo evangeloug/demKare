@@ -2,6 +2,9 @@
     <string name="app_name">demKare</string>
     
     <string name="fieldMessage">All * fields are mandatory</string>
+    <string name="appIcon">Image for app</string>
+    <string name="appTitle">demKare</string>
+    <string name="appMessage">App to Support People with Dementia</string>
 
     <string name="mmLogoutImg">Logout icon</string>
     <string name="mmContactsImg">Contacts icon</string>
