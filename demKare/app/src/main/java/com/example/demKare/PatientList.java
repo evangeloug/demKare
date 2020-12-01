@@ -26,6 +26,7 @@ public class PatientList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_list);
+        patients.add("blank");
         patients.add("alois2");
         patients.add("cpro");
     }
@@ -153,7 +154,9 @@ public class PatientList extends AppCompatActivity {
                     }
                 });
 
-                linear.addView(view);
+                if(PatientList.patients.get(i).equals("blank"));
+                else
+                    linear.addView(view);
             }
 
 
