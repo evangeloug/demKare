@@ -93,7 +93,7 @@ It can also be helpful to know how symptoms change over stages. Alzheimer’s an
         and functions (physical abilities). These scales are the Global Deterioration Scale for Assessment
         of Primary Degenerative Dementia, the Functional Assessment Staging Test, and the Clinical Dementia Rating</string>
     <string name="SAVE">SAVE</string>
-    <string name="all_fields_are_mandatory">all fields are mandatory</string>
+    <string name="all_fields_are_mandatory">All fields are mandatory</string>
     <string name="reminder_name">Reminder name</string>
     <string name="date_dd_mm_yyyy">Date dd/mm/yyyy</string>
     <string name="time_hh_mm">Time hh:mm</string>
