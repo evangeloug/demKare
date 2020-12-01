@@ -206,9 +206,9 @@
                </LinearLayout>
            </androidx.cardview.widget.CardView>
 
-           // DEMENTIA INFO BUTTON
+           // ASSESSMENT BUTTON
            <androidx.cardview.widget.CardView
-               android:id="@+id/mmDemInfoButton"
+               android:id="@+id/mmAssessmentButton"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_columnWeight="1"
@@ -218,7 +218,7 @@
                android:layout_margin="12dp">
 
                <LinearLayout
-                   android:id="@+id/mmDemInfoButtonLinear"
+                   android:id="@+id/mmAssessmentButtonLinear"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:gravity="center"
@@ -227,20 +227,20 @@
 
                    // Each icon has image and text
                    <ImageView
-                       android:id="@+id/mmDemInfoButtonImage"
+                       android:id="@+id/mmAssessmentButtonImage"
                        android:layout_width="80dp"
                        android:layout_height="80dp"
-                       app:srcCompat="@drawable/ic_mm_deminfo"
-                       android:contentDescription="@string/mmDemInfoImg"/>
+                       app:srcCompat="@drawable/ic_mm_assessment"
+                       android:contentDescription="@string/mmAssessmentImg"/>
 
                    <TextView
-                       android:id="@+id/mmDemInfoButtonText"
+                       android:id="@+id/mmAssessmentButtonText"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="@string/mmDemInfo"
+                       android:text="@string/mmAssessment"
                        android:textSize="18sp"
                        android:textColor="#000000"
-                       android:layout_marginTop="10dp"/>
+                       android:layout_marginTop="12dp"/>
                </LinearLayout>
            </androidx.cardview.widget.CardView>
 
@@ -282,9 +282,9 @@
                </LinearLayout>
            </androidx.cardview.widget.CardView>
 
-           // ASSESSMENT BUTTON
+           // DEMENTIA INFO BUTTON
            <androidx.cardview.widget.CardView
-               android:id="@+id/mmAssessmentButton"
+               android:id="@+id/mmDemInfoButton"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_columnWeight="1"
@@ -294,7 +294,7 @@
                android:layout_margin="12dp">
 
                <LinearLayout
-                   android:id="@+id/mmAssessmentButtonLinear"
+                   android:id="@+id/mmDemInfoButtonLinear"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:gravity="center"
@@ -303,20 +303,20 @@
 
                    // Each icon has image and text
                    <ImageView
-                       android:id="@+id/mmAssessmentButtonImage"
+                       android:id="@+id/mmDemInfoButtonImage"
                        android:layout_width="80dp"
                        android:layout_height="80dp"
-                       app:srcCompat="@drawable/ic_mm_assessment"
-                       android:contentDescription="@string/mmAssessmentImg"/>
+                       app:srcCompat="@drawable/ic_mm_deminfo"
+                       android:contentDescription="@string/mmDemInfoImg"/>
 
                    <TextView
-                       android:id="@+id/mmAssessmentButtonText"
+                       android:id="@+id/mmDemInfoButtonText"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="@string/mmAssessment"
+                       android:text="@string/mmDemInfo"
                        android:textSize="18sp"
                        android:textColor="#000000"
-                       android:layout_marginTop="12dp"/>
+                       android:layout_marginTop="10dp"/>
                </LinearLayout>
            </androidx.cardview.widget.CardView>
 
