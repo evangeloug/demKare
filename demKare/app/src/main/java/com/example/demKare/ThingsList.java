@@ -58,8 +58,8 @@ public class ThingsList extends AppCompatActivity {
         linearVerticalLayout = (LinearLayout) findViewById(R.id.linearVerticalLayout);
 
         //hardcode 2 items
-        addLikedItem("Sheftalies","Food","des",null,"@drawable/sheftalies");
-        addLikedItem("Ferrari","Cars","This is a ferrari car!",null, "@drawable/ferrari");
+        addLikedItem("Spiti mou","","To spiti mou me odo Spiridonos 2",null,"@drawable/sheftalies");
+        addLikedItem("To aftokinito mou","","Afto ine to aftokinito mou an to ksexaso me noume AAA001",null, "@drawable/ferrari");
     }
 
     @Override
@@ -143,7 +143,7 @@ public class ThingsList extends AppCompatActivity {
         TextView title = (TextView) item.findViewById(R.id.likeItemName);
         title.setText(titleText);
         TextView category = (TextView) item.findViewById(R.id.likeItemCategoryText);
-        category.setText(categoryText);
+        category.setText("");
         ImageView image = (ImageView) item.findViewById(R.id.likeItemImage);
         setPicture(image, picture, path);
         FloatingActionButton delete = (FloatingActionButton) item.findViewById(R.id.likeItemDeleteFAButton);
