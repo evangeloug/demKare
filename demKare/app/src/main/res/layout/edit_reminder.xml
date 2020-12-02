@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="@string/SAVE"
+        android:text="@string/saveButton"
         android:textSize="18sp"
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
