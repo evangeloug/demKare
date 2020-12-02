@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Sign_up extends AppCompatActivity {
@@ -13,7 +15,11 @@ public class Sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        getSupportActionBar().hide();
+
+        ImageView img =  (ImageView) findViewById(R.id.appIconSignUp);
+        int appImg = getResources().getIdentifier("@drawable/ic_launcher_foreground", null, getPackageName());
+        img.setImageDrawable(getResources().getDrawable(appImg));
+        //getSupportActionBar().hide();
     }
 
     public void donemethod(View view) {
@@ -44,12 +50,10 @@ public class Sign_up extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(getApplicationContext(), "sign up syccesfully",
+            Toast.makeText(getApplicationContext(), "Sign up successful. Signing in.",
                     Toast.LENGTH_SHORT).show();
 
-            Toast.makeText(getApplicationContext(), "sign in now",
-                    Toast.LENGTH_LONG).show();
-            finish();
+            //finish();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
