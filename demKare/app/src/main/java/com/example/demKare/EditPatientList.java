@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class EditPatientList extends AppCompatActivity {
 
     private EditText editName;
@@ -46,77 +48,77 @@ public class EditPatientList extends AppCompatActivity {
             ((FloatingActionButton) view.findViewById(R.id.patientEditButton)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                     if(PatientList.patients.get(finalI1).equals("george01")) {
+                    if(PatientList.patients.get(finalI).equals("george01")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Giorgos Mixail");
                         intent.putExtra("email", "george01@gmail.com");
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
                         intent.putExtra("username", "george01");
                         intent.putExtra("password", "dafdSA3f");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
 
                         startActivityForResult(intent, 99);
                     }
 
-                    if(PatientList.patients.get(finalI1).equals("petros33")) {
+                    if(PatientList.patients.get(finalI).equals("petros33")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Petros Georgiou");
                         intent.putExtra("email", "petros33@gmail.com");
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
                         intent.putExtra("username", "petros33");
                         intent.putExtra("password", "F32gDadasd");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
                         startActivityForResult(intent, 99);
                     }
 
-                    if(PatientList.patients.get(finalI1).equals("kostas88")) {
+                    if(PatientList.patients.get(finalI).equals("kostas88")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Konstantinos Kyriakou");
                         intent.putExtra("email", "kostas88@gmail.com");
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
                         intent.putExtra("username", "kostas88");
                         intent.putExtra("password", "£FASsd231");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
 
                         startActivityForResult(intent, 99);
                     }
 
 
-                    if(PatientList.patients.get(finalI1).equals("alois2")) {
+                    if(PatientList.patients.get(finalI).equals("alois2")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Andreas Loizou");
                         intent.putExtra("email", "alois2@gmail.com");
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
                         intent.putExtra("username", "alois2");
                         intent.putExtra("password", "FSavsdfe2");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
 
                         startActivityForResult(intent, 99);
                     }
 
 
-                    if(PatientList.patients.get(finalI1).equals("cpro")) {
+                    if(PatientList.patients.get(finalI).equals("cpro")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Constantinos Prokopiou");
                         intent.putExtra("email", "cpro@gmail.com");
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
                         intent.putExtra("username", "cpro");
                         intent.putExtra("password", "2g45241");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
 
                         startActivityForResult(intent, 99);
                     }
 
 
                     else {
-                        String email = PatientList.patients.get(finalI1) + "gmail.com";
+                        String email = PatientList.patients.get(finalI) + "gmail.com";
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Marios Petrou");
                         intent.putExtra("email", email);
-                        intent.putExtra("phone", PatientList.phone.get(finalI1));
-                        intent.putExtra("username", PatientList.patients.get(finalI1));
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", PatientList.patients.get(finalI));
                         intent.putExtra("password", "213fsSfdD");
-                        intent.putExtra("index", finalI1);
+                        intent.putExtra("index", finalI);
 
                         startActivityForResult(intent, 99);
                     }
@@ -148,7 +150,7 @@ public class EditPatientList extends AppCompatActivity {
         }
     }
 
-    
+
 
 
 }
