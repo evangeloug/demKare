@@ -1,4 +1,4 @@
-package com.example.reminders;
+package com.example.demKare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
