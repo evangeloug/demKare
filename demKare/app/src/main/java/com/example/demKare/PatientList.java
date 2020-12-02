@@ -23,19 +23,22 @@ public class PatientList extends AppCompatActivity {
     int LAUNCH_SECOND_ACTIVITY =1;
     public static ArrayList<String> patients = new ArrayList<String>();
     public static ArrayList<String> phone = new ArrayList<String>();
-    boolean first = true;
+    static boolean first = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_list);
-        patients.add("blank");
-        patients.add("alois2");
-        patients.add("cpro");
+          if(first) {
+            patients.add("blank");
+            patients.add("alois2");
+            patients.add("cpro");
 
-        phone.add("blank");
-        phone.add("95254867");
-        phone.add("95785367");
+            phone.add("blank");
+            phone.add("95254867");
+            phone.add("95785367");
+            first=false;
+        }
     }
 
     public void logOut(View view){
