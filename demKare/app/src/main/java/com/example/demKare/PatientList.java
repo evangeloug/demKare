@@ -4,185 +4,151 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class PatientList extends AppCompatActivity {
+public class EditPatientList extends AppCompatActivity {
 
-    int LAUNCH_SECOND_ACTIVITY =1;
-    public static ArrayList<String> patients = new ArrayList<String>();
-    public static ArrayList<String> phone = new ArrayList<String>();
-    boolean first = true;
+    private EditText editName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_list);
-        patients.add("blank");
-        patients.add("alois2");
-        patients.add("cpro");
-        
-        phone.add("blank");
-        phone.add("95254867");
-        phone.add("95785367");
-    }
+        setContentView(R.layout.activity_edit_patient_list);
 
-    public void logOut(View view){
+        editName = findViewById(R.id.editListName);
+        TextView myAwesomeTextView = (TextView)findViewById(R.id.patientUserEdit);
 
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_logout, null);
+        LinearLayout linear = (LinearLayout) findViewById(R.id.editPatientListLinear);
+        for(int i = 0; i< PatientList.patients.size(); i++){
 
+            final int finalI = i;
 
-
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-
-        popupWindow.showAtLocation(view, Gravity.CENTER,  0, 0);
-
-
-
-    }
-
-    public void logOutConfirm(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        finish();
-        startActivity(intent);
-    }
-
-
-
-    public void addPatients(View view) {
-
-        LAUNCH_SECOND_ACTIVITY = 1;
-        Intent i = new Intent(this, EditPatientList.class);
-
-        startActivityForResult(i, LAUNCH_SECOND_ACTIVITY);
-
-    }
-    @Override
-    public void onResume(){
-        super.onResume();
-
-            LinearLayout linear = (LinearLayout) findViewById(R.id.patientListLinear);
-            linear.removeAllViews();
-            for(int i = 0; i< PatientList.patients.size(); i++) {
-
-                final int c=i;
-                final View view = getLayoutInflater().inflate(R.layout.patient_list_row, null);
-                String displayname = "";
-                if(PatientList.patients.get(i).equals("george01")) {
-                    displayname = "Giorgos Mixail";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
+            final View view = getLayoutInflater().inflate(R.layout.patient_item, null);
+            ((TextView) view.findViewById(R.id.patientUserEdit)).setText(PatientList.patients.get(i));
+            ((FloatingActionButton) view.findViewById(R.id.patientDeleteButton)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    view.setVisibility(View.GONE);
+                    PatientList.patients.remove(finalI);
+                    PatientList.phone.remove(finalI);
                 }
-                else if(PatientList.patients.get(i).equals("petros33")) {
-                    displayname = "Petros Georgiou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
-                }
-                else if(PatientList.patients.get(i).equals("kostas88")) {
-                    displayname = "Konstantinos Kyriakou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
-                }
-                else if(PatientList.patients.get(i).equals("alois2")) {
-                    displayname = "Andreas Loizou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
-                }
-                else if(PatientList.patients.get(i).equals("cpro")) {
-                    displayname = "Constantinos Prokopiou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
-                }
-                else {
-                    displayname = "Marios Petrou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:" + phone.get(c)));
-                            startActivity(i);
-                        }
-                    });
-                }
-                ((TextView) view.findViewById(R.id.patientNameList)).setText(displayname);
-                ((TextView) view.findViewById(R.id.patientNameList)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(PatientList.this, MainMenu.class);
-                        startActivity(intent);
+            });
+
+            ((FloatingActionButton) view.findViewById(R.id.patientEditButton)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                     if(PatientList.patients.get(finalI).equals("george01")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Giorgos Mixail");
+                        intent.putExtra("email", "george01@gmail.com");
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", "george01");
+                        intent.putExtra("password", "dafdSA3f");
+                        intent.putExtra("index", finalI);
+
+                        startActivityForResult(intent, 99);
                     }
-                });
 
-                if(PatientList.patients.get(i).equals("blank"));
-                else
-                    linear.addView(view);
-            }
+                    if(PatientList.patients.get(finalI).equals("petros33")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Petros Georgiou");
+                        intent.putExtra("email", "petros33@gmail.com");
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", "petros33");
+                        intent.putExtra("password", "F32gDadasd");
+                        intent.putExtra("index", finalI);
+                        startActivityForResult(intent, 99);
+                    }
 
+                    if(PatientList.patients.get(finalI).equals("kostas88")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Konstantinos Kyriakou");
+                        intent.putExtra("email", "kostas88@gmail.com");
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", "kostas88");
+                        intent.putExtra("password", "£FASsd231");
+                        intent.putExtra("index", finalI);
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    if(PatientList.patients.get(finalI).equals("alois2")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Andreas Loizou");
+                        intent.putExtra("email", "alois2@gmail.com");
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", "alois2");
+                        intent.putExtra("password", "FSavsdfe2");
+                        intent.putExtra("index", finalI);
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    if(PatientList.patients.get(finalI).equals("cpro")) {
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Constantinos Prokopiou");
+                        intent.putExtra("email", "cpro@gmail.com");
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", "cpro");
+                        intent.putExtra("password", "2g45241");
+                        intent.putExtra("index", finalI);
+
+                        startActivityForResult(intent, 99);
+                    }
+
+
+                    else {
+                        String email = PatientList.patients.get(finalI) + "gmail.com";
+                        Intent intent = new Intent(view.getContext(), EditAccount.class);
+                        intent.putExtra("fullname", "Marios Petrou");
+                        intent.putExtra("email", email);
+                        intent.putExtra("phone", PatientList.phone.get(finalI));
+                        intent.putExtra("username", PatientList.patients.get(finalI));
+                        intent.putExtra("password", "213fsSfdD");
+                        intent.putExtra("index", finalI);
+
+                        startActivityForResult(intent, 99);
+                    }
+                }
+            });
+
+
+            if(PatientList.patients.get(i).equals("blank"));
+            else
+                linear.addView(view);
+        }
 
     }
 
+    public void saveChanges(View view) {
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        String name = editName.getText().toString();
 
-        if (requestCode == LAUNCH_SECOND_ACTIVITY) {
-            if (resultCode == Activity.RESULT_OK) {
-                String name = data.getStringExtra("name");
-                patients.add(name);
+        Intent returnIntent = new Intent();
 
-
-            }
-            if (resultCode == Activity.RESULT_CANCELED) {
-                //Write your code if there's no result
-            }
+        returnIntent.putExtra("name",name);
+        if(name.matches("")){
+            setResult(Activity.RESULT_CANCELED, returnIntent);
+            finish();
+        }
+        else {
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
         }
     }
+
+    
+
 
 }
