@@ -29,17 +29,18 @@
     <string name="callButton">Call button</string>
 
     <string name="sign_in">Sign in</string>
-    <string name="sign_up">sign up</string>
+    <string name="sign_up">Sign up</string>
+    <string name="accountMessage">No account?</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="first_name_signup">first name</string>
-    <string name="last_name_signup">last name</string>
-    <string name="telephone_signup">telephone</string>
-    <string name="password_signup">password</string>
-    <string name="email_signup">email</string>
-    <string name="caregiver_signup">caregiver</string>
+    <string name="first_name_signup">First name</string>
+    <string name="last_name_signup">Last name</string>
+    <string name="telephone_signup">Telephone</string>
+    <string name="password_signup">Password</string>
+    <string name="email_signup">Email</string>
+    <string name="caregiver_signup">Caregiver</string>
     <string name="done_signup">Done</string>
-    <string name="date_signup">birthdate</string>
+    <string name="date_signup">Birth date</string>
 
     <string name="saveButton">Save Changes</string>
     <string name="hiText">Hello</string>
