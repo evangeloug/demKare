@@ -86,7 +86,7 @@ public class PatientList extends AppCompatActivity {
                 String displayname = "";
                 if(PatientList.patients.get(i).equals("george01")) {
                     displayname = "Giorgos Mixail";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
@@ -97,7 +97,7 @@ public class PatientList extends AppCompatActivity {
                 }
                 else if(PatientList.patients.get(i).equals("petros33")) {
                     displayname = "Petros Georgiou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
@@ -108,7 +108,7 @@ public class PatientList extends AppCompatActivity {
                 }
                 else if(PatientList.patients.get(i).equals("kostas88")) {
                     displayname = "Konstantinos Kyriakou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
@@ -119,7 +119,7 @@ public class PatientList extends AppCompatActivity {
                 }
                 else if(PatientList.patients.get(i).equals("alois2")) {
                     displayname = "Andreas Loizou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
@@ -130,7 +130,7 @@ public class PatientList extends AppCompatActivity {
                 }
                 else if(PatientList.patients.get(i).equals("cpro")) {
                     displayname = "Constantinos Prokopiou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
@@ -141,7 +141,7 @@ public class PatientList extends AppCompatActivity {
                 }
                 else {
                     displayname = "Marios Petrou";
-                    ((ImageView) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
+                    ((FloatingActionButton) view.findViewById(R.id.callButtonCaregiver)).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
