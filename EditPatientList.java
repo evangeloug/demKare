@@ -40,6 +40,7 @@ public class EditPatientList extends AppCompatActivity {
                 public void onClick(View v) {
                     view.setVisibility(View.GONE);
                     PatientList.patients.remove(finalI);
+                    PatientList.phone.remove(finalI);
                 }
             });
 
@@ -51,9 +52,10 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Giorgos Mixail");
                         intent.putExtra("email", "george01@gmail.com");
-                        intent.putExtra("phone", "99854815");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", "george01");
                         intent.putExtra("password", "dafdSA3f");
+                        intent.putExtra("index", finalI1);
 
                         startActivityForResult(intent, 99);
                     }
@@ -62,9 +64,10 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Petros Georgiou");
                         intent.putExtra("email", "petros33@gmail.com");
-                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", "petros33");
                         intent.putExtra("password", "F32gDadasd");
+                        intent.putExtra("index", finalI1);
 
                         startActivityForResult(intent, 99);
                     }
@@ -73,9 +76,10 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Konstantinos Kyriakou");
                         intent.putExtra("email", "kostas88@gmail.com");
-                        intent.putExtra("phone", "99237467");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", "kostas88");
                         intent.putExtra("password", "£FASsd231");
+                        intent.putExtra("index", finalI1);
 
                         startActivityForResult(intent, 99);
                     }
@@ -85,9 +89,10 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Andreas Loizou");
                         intent.putExtra("email", "alois2@gmail.com");
-                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", "alois2");
                         intent.putExtra("password", "FSavsdfe2");
+                        intent.putExtra("index", finalI1);
 
                         startActivityForResult(intent, 99);
                     }
@@ -97,9 +102,11 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Constantinos Prokopiou");
                         intent.putExtra("email", "cpro@gmail.com");
-                        intent.putExtra("phone", "95254867");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", "cpro");
                         intent.putExtra("password", "2g45241");
+                        intent.putExtra("index", finalI1);
+                        startActivityForResult(intent, 99);
 
                         startActivityForResult(intent, 99);
                     }
@@ -110,9 +117,11 @@ public class EditPatientList extends AppCompatActivity {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Marios Petrou");
                         intent.putExtra("email", email);
-                        intent.putExtra("phone", "99356137");
+                        intent.putExtra("phone", PatientList.phone.get(finalI1));
                         intent.putExtra("username", PatientList.patients.get(finalI1));
                         intent.putExtra("password", "213fsSfdD");
+                        intent.putExtra("index", finalI1);
+
 
                         startActivityForResult(intent, 99);
                     }
