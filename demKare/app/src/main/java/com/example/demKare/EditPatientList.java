@@ -26,6 +26,7 @@ public class EditPatientList extends AppCompatActivity {
         TextView myAwesomeTextView = (TextView)findViewById(R.id.patientUserEdit);
 
         LinearLayout linear = (LinearLayout) findViewById(R.id.editPatientListLinear);
+        linear.removeAllViews();
         for(int i = 0; i< PatientList.patients.size(); i++){
 
             final int finalI = i;
