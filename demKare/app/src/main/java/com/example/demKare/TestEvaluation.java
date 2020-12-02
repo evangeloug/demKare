@@ -215,13 +215,10 @@ public class TestEvaluation extends AppCompatActivity {
                         a1.getText().clear();
                         a2.getText().clear();
                         a3.getText().clear();
-                        q1.setText("“I would like you to count backward from 100 by sevens.” (93, 86, 79,\n" +
-                                "72, 65, …)\n" +
+                        q1.setText("“I would like you to count backward from 100 by sevens.” (93, 86, 79, 72, 65, …)\n" +
                                 "Alternative: “Spell WORLD backwards.” (D-L-R-O-W)");
-                        q2.setText("Earlier I told you the names of three things. Can you tell me what\n" +
-                                "those were?");
-                        q3.setText("Show the patient two simple objects, such as a wristwatch and a pencil,\n" +
-                                "and ask the patient to name them.");
+                        q2.setText("Earlier I told you the names of three things. Can you tell me what those were?");
+                        q3.setText("Show the patient two simple objects, such as a wristwatch and a pencil, and ask the patient to name them.");
                         count++;
                         isOkay=true;
                     }
@@ -249,8 +246,7 @@ public class TestEvaluation extends AppCompatActivity {
                         q1.setText("“Repeat the phrase: ‘No ifs, ands, or buts.’”");
                         q2.setText("Take the paper in your right hand, fold it in half, and put it on the floor.”\n" +
                                 "(The examiner gives the patient a piece of blank paper.)");
-                        q3.setText("Please read this and do what it says.” (Written instruction is “Close\n" +
-                                "your eyes.”");
+                        q3.setText("Please read this and do what it says.” (Written instruction is “Close your eyes.”");
                         isOkay=true;
                         count++;
                     }
@@ -275,8 +271,7 @@ public class TestEvaluation extends AppCompatActivity {
                         a1.getText().clear();
                         a2.getText().clear();
                         a3.getText().clear();
-                        q1.setText("“Make up and write a sentence about anything.” (This sentence must\n" +
-                                "contain a noun and a verb.)");
+                        q1.setText("“Make up and write a sentence about anything.” (This sentence must contain a noun and a verb.)");
                         q2.setVisibility(View.GONE);
                         a2.setVisibility(View.GONE);
                         q3.setVisibility(View.GONE);
