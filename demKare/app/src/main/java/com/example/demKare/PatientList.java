@@ -178,6 +178,22 @@ public class PatientList extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 String name = data.getStringExtra("name");
                 patients.add(name);
+                 if(name.equals("george01"))
+                    phone.add("96486523");
+                else if(name.equals("petros33")){
+                    phone.add("95816658");
+                }
+                else if(name.equals("kostas88")){
+                    phone.add("99425123");
+                }
+                else if(name.equals("alois2")){
+                    phone.add("97625033");
+                }
+                else if(name.equals("cpro")){
+                    phone.add("99563154");
+                }
+                else
+                    phone.add("99856231");
 
 
             }
