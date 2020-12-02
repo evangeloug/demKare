@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         TextView test1 = (TextView)findViewById(R.id.username_enter);
         String testA = test1.getText().toString();
         Intent intent = new Intent(this, Sign_up.class);
-        finish();
+        //finish();
         startActivity(intent);
     }
 
@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         String testA = test1.getText().toString();
         if(testA.equals("caregiver")){
             Intent intent = new Intent(this, PatientList.class);
-           finish();
+           //finish();
            startActivity(intent);
         }else{
                 Intent intent = new Intent(this, MainMenu.class);
-                finish();
+                //finish();
                 startActivity(intent);
         }
     }
