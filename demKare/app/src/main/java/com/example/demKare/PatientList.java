@@ -20,6 +20,7 @@ public class PatientList extends AppCompatActivity {
 
     int LAUNCH_SECOND_ACTIVITY =1;
     public static ArrayList<String> patients = new ArrayList<String>();
+    public static ArrayList<String> phone = new ArrayList<String>();
     boolean first = true;
 
     @Override
@@ -29,6 +30,10 @@ public class PatientList extends AppCompatActivity {
         patients.add("blank");
         patients.add("alois2");
         patients.add("cpro");
+        
+        phone.add("blank");
+        phone.add("95254867");
+        phone.add("95785367");
     }
 
     public void logOut(View view){
@@ -76,7 +81,7 @@ public class PatientList extends AppCompatActivity {
             linear.removeAllViews();
             for(int i = 0; i< PatientList.patients.size(); i++) {
 
-
+                final int c=i;
                 final View view = getLayoutInflater().inflate(R.layout.patient_list_row, null);
                 String displayname = "";
                 if(PatientList.patients.get(i).equals("george01")) {
@@ -85,7 +90,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:99854815"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
@@ -96,7 +101,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:95254867"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
@@ -107,7 +112,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:99237467"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
@@ -118,7 +123,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:95254867"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
@@ -129,7 +134,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:95254867"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
@@ -140,7 +145,7 @@ public class PatientList extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent i = new Intent(Intent.ACTION_DIAL, null);
-                            i.setData(Uri.parse("tel:99356137"));
+                            i.setData(Uri.parse("tel:" + phone.get(c)));
                             startActivity(i);
                         }
                     });
