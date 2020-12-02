@@ -58,8 +58,8 @@ public class ThingsList extends AppCompatActivity {
         linearVerticalLayout = (LinearLayout) findViewById(R.id.linearVerticalLayout);
 
         //hardcode 2 items
-        addLikedItem("My house","","This is my home with address: Spiridonos 2",null,"@drawable/myhouse");
-        addLikedItem("My car","","This is my car Buick LeSabre with plate number: AAA001",null, "@drawable/mycar");
+        addLikedItem("My house","","This is my home with address Spiridonos 2",null,"@drawable/myhouse");
+        addLikedItem("My car","","This is my car Buick LeSabre with plate number AAA001",null, "@drawable/mycar");
     }
 
     @Override
@@ -300,8 +300,6 @@ public class ThingsList extends AppCompatActivity {
             case PERMISSION_CODE:{
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                     pickImageFromGallery(); // permission was granted
-                else
-                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_SHORT).show();
             }
         }
     }
