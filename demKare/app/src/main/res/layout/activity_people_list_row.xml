@@ -69,6 +69,7 @@
 
     <TextView
         android:id="@+id/rememberedPersonRelationship"
+        android:textSize="18sp"
         android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
