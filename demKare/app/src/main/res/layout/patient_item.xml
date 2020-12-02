@@ -17,31 +17,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/patientEditButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:clickable="true"
-        android:onClick="addPatients"
-        app:layout_constraintEnd_toStartOf="@+id/patientDeleteButton"
-        app:layout_constraintHorizontal_bias="0.463"
+        android:contentDescription="@string/editButton"
+        android:focusable="true"
+        app:backgroundTint="#ff008577"
         app:layout_constraintStart_toEndOf="@+id/patientUserEdit"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@drawable/ic_edit" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/patientDeleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="24dp"
         android:clickable="true"
-        android:onClick="addPatients"
-        app:backgroundTint="#C81212"
+        android:contentDescription="@string/deleteButton"
+        android:focusable="true"
+        app:backgroundTint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toEndOf="@+id/patientEditButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
-    
-    
+        app:srcCompat="@drawable/ic_delete" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
