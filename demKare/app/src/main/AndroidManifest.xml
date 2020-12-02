@@ -26,6 +26,7 @@
         <activity android:name=".Sign_up"></activity>
         <activity android:name=".TestEvaluation"></activity>
         <activity android:name=".ThingsList"></activity>
+        <activity android:name=".VideoInfo"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
