@@ -8,10 +8,8 @@
 
     <ImageView
         android:id="@+id/appIconSignUp"
-        android:layout_width="225dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:contentDescription="@string/appIcon"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
@@ -96,7 +94,7 @@
         android:id="@+id/editTextPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="@string/telephone_signup"
         android:inputType="phone"
