@@ -39,6 +39,7 @@ public class EditPatientList extends AppCompatActivity {
                     view.setVisibility(View.GONE);
                     PatientList.patients.remove(finalI);
                     PatientList.phone.remove(finalI);
+                    EditPatientList.this.finish();
                 }
             });
 
