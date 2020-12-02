@@ -42,7 +42,7 @@ public class Contacts extends AppCompatActivity {
         peopleLinear = (LinearLayout) findViewById(R.id.peopleCLinear);
 
         // inserting people for testing
-        addPerson("Andreas","Georgiou","Father", "77777777",null,"@drawable/person");
+        addPerson("Giorgos","Andreou","Friend", "77777777",null,"@drawable/person");
 
         insertButton = (FloatingActionButton) findViewById(R.id.peopleCInsertButton);
         insertButton.setOnClickListener(new View.OnClickListener() {
