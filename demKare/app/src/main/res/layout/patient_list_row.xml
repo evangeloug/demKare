@@ -15,10 +15,10 @@
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/callButtonCaregiver"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="@string/callButton"
         android:clickable="true"
         android:focusable="true"
