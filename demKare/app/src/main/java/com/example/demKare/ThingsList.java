@@ -58,8 +58,8 @@ public class ThingsList extends AppCompatActivity {
         linearVerticalLayout = (LinearLayout) findViewById(R.id.linearVerticalLayout);
 
         //hardcode 2 items
-        addLikedItem("Spiti mou","","To spiti mou me odo Spiridonos 2",null,"@drawable/sheftalies");
-        addLikedItem("To aftokinito mou","","Afto ine to aftokinito mou an to ksexaso me noume AAA001",null, "@drawable/ferrari");
+        addLikedItem("Spiti mou","","To spiti mou me odo Spiridonos 2",null,"@drawable/car");
+        addLikedItem("To aftokinito mou","","Afto ine to aftokinito mou an to ksexaso me noume AAA001",null, "@drawable/myhouse");
     }
 
     @Override
