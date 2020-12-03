@@ -10,14 +10,13 @@
         android:id="@+id/appIcon"
         android:layout_width="175dp"
         android:layout_height="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="70dp"
         android:contentDescription="@string/appIcon"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/appName"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -54,7 +53,7 @@
         android:id="@+id/username_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textPersonName"
@@ -66,7 +65,7 @@
         android:id="@+id/password_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -78,16 +77,29 @@
         android:id="@+id/sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_marginBottom="35dp"
         android:background="#4CAF50"
         android:onClick="sign_inmethod"
         android:text="@string/sign_in"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/noAccountText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_enter"
-        app:layout_constraintBottom_toTopOf="@+id/noAccountText"/>
+        app:layout_constraintTop_toBottomOf="@+id/accountMandatoryText4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/accountMandatoryText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/all_fields_are_mandatory"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_enter" />
 
     <TextView
         android:id="@+id/noAccountText"

@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".EditReminder">
 
+    <EditText
+        android:id="@+id/accountMandatoryText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/all_fields_are_mandatory"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
     <Button
         android:id="@+id/setPicButton"
         android:layout_width="wrap_content"

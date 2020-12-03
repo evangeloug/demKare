@@ -8,14 +8,16 @@
 
     <ImageView
         android:id="@+id/appIconSignUp"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
         android:contentDescription="@string/appIcon"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636"
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText

@@ -34,9 +34,9 @@
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
-        android:fontFamily="casual"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.demKare.EditThingsItem">
 
+    <EditText
+        android:id="@+id/accountMandatoryText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/fieldMessage"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionThingsText" />
+
     <Button
         android:id="@+id/setThingsPicButton"
         android:layout_width="wrap_content"
@@ -34,10 +47,10 @@
 
     <Spinner
         android:id="@+id/categoryThingsSpinner"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="28dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/descriptionThingsText"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,12 +63,12 @@
         android:layout_height="154dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/likeListPictureMessage"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toStartOf="@+id/setThingsPicButton"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery"
-        android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <EditText
@@ -84,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionThingsText"
-        app:layout_constraintVertical_bias="0.664" />
+        app:layout_constraintTop_toBottomOf="@+id/accountMandatoryText3"
+        app:layout_constraintVertical_bias="0.87" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
