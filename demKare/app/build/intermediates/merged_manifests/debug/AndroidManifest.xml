@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demKare"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DemKare" >
+        <activity android:name="com.example.demKare.Contacts" />
+        <activity android:name="com.example.demKare.EditAccount" />
+        <activity android:name="com.example.demKare.EditContacts" />
+        <activity android:name="com.example.demKare.EditLikeListItem" />
+        <activity android:name="com.example.demKare.EditPatientList" />
+        <activity android:name="com.example.demKare.EditPeopleToRemember" />
+        <activity android:name="com.example.demKare.EditReminder" />
+        <activity android:name="com.example.demKare.EditThingsItem" />
+        <activity android:name="com.example.demKare.LikeList" />
+        <activity android:name="com.example.demKare.MainMenu" />
+        <activity android:name="com.example.demKare.PatientList" />
+        <activity android:name="com.example.demKare.PeopleToRemember" />
+        <activity android:name="com.example.demKare.ReadAboutDementia" />
+        <activity android:name="com.example.demKare.ReminderList" />
+        <activity android:name="com.example.demKare.Sign_up" />
+        <activity android:name="com.example.demKare.TestEvaluation" />
+        <activity android:name="com.example.demKare.ThingsList" />
+        <activity android:name="com.example.demKare.VideoInfo" />
+        <activity android:name="com.example.demKare.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,103 @@
+com/example/demKare/Reminder.java
+ com.example.demKare.Reminder
+com/example/demKare/VideoInfo.java
+ com.example.demKare.VideoInfo
+ com.example.demKare.VideoInfo$1
+com/example/demKare/EditContacts.java
+ com.example.demKare.EditContacts
+ com.example.demKare.EditContacts$1
+ com.example.demKare.EditContacts$2
+com/example/demKare/LikeList.java
+ com.example.demKare.LikeList
+ com.example.demKare.LikeList$1
+ com.example.demKare.LikeList$2
+ com.example.demKare.LikeList$3
+ com.example.demKare.LikeList$4
+ com.example.demKare.LikeList$5
+ com.example.demKare.LikeList$6
+ com.example.demKare.LikeList$7
+com/example/demKare/ReminderList.java
+ com.example.demKare.ReminderList
+ com.example.demKare.ReminderList$1
+ com.example.demKare.ReminderList$2
+ com.example.demKare.ReminderList$3
+ com.example.demKare.ReminderList$4
+ com.example.demKare.ReminderList$5
+ com.example.demKare.ReminderList$6
+ com.example.demKare.ReminderList$7
+ com.example.demKare.ReminderList$8
+com/example/demKare/BuildConfig.java
+ com.example.demKare.BuildConfig
+com/example/demKare/Contacts.java
+ com.example.demKare.Contacts
+ com.example.demKare.Contacts$1
+ com.example.demKare.Contacts$2
+ com.example.demKare.Contacts$3
+ com.example.demKare.Contacts$4
+ com.example.demKare.Contacts$5
+com/example/demKare/ThingsList.java
+ com.example.demKare.ThingsList
+ com.example.demKare.ThingsList$1
+ com.example.demKare.ThingsList$2
+ com.example.demKare.ThingsList$3
+ com.example.demKare.ThingsList$4
+ com.example.demKare.ThingsList$5
+ com.example.demKare.ThingsList$6
+ com.example.demKare.ThingsList$7
+com/example/demKare/ReadAboutDementia.java
+ com.example.demKare.ReadAboutDementia
+ com.example.demKare.ReadAboutDementia$1
+com/example/demKare/EditPeopleToRemember.java
+ com.example.demKare.EditPeopleToRemember
+ com.example.demKare.EditPeopleToRemember$1
+ com.example.demKare.EditPeopleToRemember$2
+com/example/demKare/Assessment.java
+ com.example.demKare.Assessment
+com/example/demKare/EditPatientList.java
+ com.example.demKare.EditPatientList
+ com.example.demKare.EditPatientList$1
+ com.example.demKare.EditPatientList$2
+com/example/demKare/Sign_up.java
+ com.example.demKare.Sign_up
+com/example/demKare/EditThingsItem.java
+ com.example.demKare.EditThingsItem
+ com.example.demKare.EditThingsItem$1
+ com.example.demKare.EditThingsItem$2
+com/example/demKare/MainMenu.java
+ com.example.demKare.MainMenu
+ com.example.demKare.MainMenu$1
+com/example/demKare/EditLikeListItem.java
+ com.example.demKare.EditLikeListItem
+ com.example.demKare.EditLikeListItem$1
+ com.example.demKare.EditLikeListItem$2
+com/example/demKare/EditAccount.java
+ com.example.demKare.EditAccount
+ com.example.demKare.EditAccount$1
+com/example/demKare/EditReminder.java
+ com.example.demKare.EditReminder
+ com.example.demKare.EditReminder$1
+ com.example.demKare.EditReminder$2
+com/example/demKare/PeopleToRemember.java
+ com.example.demKare.PeopleToRemember
+ com.example.demKare.PeopleToRemember$1
+ com.example.demKare.PeopleToRemember$2
+ com.example.demKare.PeopleToRemember$3
+ com.example.demKare.PeopleToRemember$4
+com/example/demKare/DementiaInfo.java
+ com.example.demKare.DementiaInfo
+com/example/demKare/PatientList.java
+ com.example.demKare.PatientList
+ com.example.demKare.PatientList$1
+ com.example.demKare.PatientList$2
+ com.example.demKare.PatientList$3
+ com.example.demKare.PatientList$4
+ com.example.demKare.PatientList$5
+ com.example.demKare.PatientList$6
+ com.example.demKare.PatientList$7
+com/example/demKare/TestEvaluation.java
+ com.example.demKare.TestEvaluation
+ com.example.demKare.TestEvaluation$1
+ com.example.demKare.TestEvaluation$1$1
+ com.example.demKare.TestEvaluation$2
+com/example/demKare/MainActivity.java
+ com.example.demKare.MainActivity
