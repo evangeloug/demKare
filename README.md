@@ -219,7 +219,7 @@ Note: The video played when pressing the button is not the final video that will
 
 
 ## Installation instructions
-To install the prototype, download demKare.apk from the repository and run it on an Android device with a version of 4.1.1 or higher.
+To install this app prototype, download demKare.apk from the repository and run it on an Android device with a version of 4.1.1 or higher.
 It's recommended that your device has a 5'6-inch display or higher.
 
 ## Code info
