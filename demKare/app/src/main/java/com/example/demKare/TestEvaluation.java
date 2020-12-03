@@ -78,9 +78,10 @@ public class TestEvaluation extends AppCompatActivity {
                             a1.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a2.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a3.setInputType(InputType.TYPE_CLASS_NUMBER);
-                            if (Integer.parseInt(a1.getText().toString())>rating[0]||Integer.parseInt(a2.getText().toString())>rating[1]||Integer.parseInt(a3.getText().toString())>rating[2]){
+                            if (a1.getText().length()==0||a2.getText().length()==0||a3.getText().length()==0||
+                                    Integer.parseInt(a1.getText().toString())>rating[0]||Integer.parseInt(a2.getText().toString())>rating[1]||Integer.parseInt(a3.getText().toString())>rating[2]){
                                 isOkay=false;
-                                Toast.makeText(TestEvaluation.this, "You can not give rating more than the value in brackets.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TestEvaluation.this, "You must give a rating up to the value in brackets.", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 testEvaluation.score = testEvaluation.score + (Integer.parseInt(a1.getText().toString()) + Integer.parseInt(a2.getText().toString()) + Integer.parseInt(a3.getText().toString()));
@@ -106,9 +107,10 @@ public class TestEvaluation extends AppCompatActivity {
                             a1.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a2.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a3.setInputType(InputType.TYPE_CLASS_NUMBER);
-                            if (Integer.parseInt(a1.getText().toString())>rating[3]||Integer.parseInt(a2.getText().toString())>rating[4]||Integer.parseInt(a3.getText().toString())>rating[5]){
+                            if (a1.getText().length()==0||a2.getText().length()==0||a3.getText().length()==0||
+                                    Integer.parseInt(a1.getText().toString())>rating[3]||Integer.parseInt(a2.getText().toString())>rating[4]||Integer.parseInt(a3.getText().toString())>rating[5]){
                                 isOkay=false;
-                                Toast.makeText(TestEvaluation.this, "You can not give rating more than the value in brackets.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TestEvaluation.this, "You must give a rating up to the value in brackets.", Toast.LENGTH_SHORT).show();
 
                             }
                             else {
@@ -135,9 +137,11 @@ public class TestEvaluation extends AppCompatActivity {
                             a1.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a2.setInputType(InputType.TYPE_CLASS_NUMBER);
                             a3.setInputType(InputType.TYPE_CLASS_NUMBER);
-                            if (Integer.parseInt(a1.getText().toString())>rating[6]||Integer.parseInt(a2.getText().toString())>rating[7]||Integer.parseInt(a3.getText().toString())>rating[8]){
+                            if (a1.getText().length()==0||a2.getText().length()==0||a3.getText().length()==0||
+                                    Integer.parseInt(a1.getText().toString())>rating[6]||Integer.parseInt(a2.getText().toString())>rating[7]
+                                    ||Integer.parseInt(a3.getText().toString())>rating[8]                                    ){
                                 isOkay=false;
-                                Toast.makeText(TestEvaluation.this, "You can not give rating more than the value in brackets.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TestEvaluation.this, "You must give a rating up to the value in brackets.", Toast.LENGTH_SHORT).show();
 
                             }
                             else {
@@ -163,9 +167,9 @@ public class TestEvaluation extends AppCompatActivity {
                             TextView q2 = (TextView) findViewById(R.id.txt_question2);
                             EditText a1 = (EditText) findViewById(R.id.txt_answer1);
                             a1.setInputType(InputType.TYPE_CLASS_NUMBER);
-                            if (Integer.parseInt(a1.getText().toString())>rating[9]){
+                            if (a1.getText().length()==0||Integer.parseInt(a1.getText().toString())>rating[9]){
                                 isOkay=false;
-                                Toast.makeText(TestEvaluation.this, "You can not give rating more than the value in brackets.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TestEvaluation.this, "You must give a rating up to the value in brackets.", Toast.LENGTH_SHORT).show();
 
                             }
                             else {
@@ -182,7 +186,6 @@ public class TestEvaluation extends AppCompatActivity {
                         }
                         else if (count2==5){
                             finish();
-                            System.exit(0);
                         }
                     }
 

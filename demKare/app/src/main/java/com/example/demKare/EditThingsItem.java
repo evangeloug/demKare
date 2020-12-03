@@ -31,7 +31,6 @@ public class EditThingsItem extends AppCompatActivity {
 
     private Button saveButton, setPicButton;
     private TextView nameText, descriptionText;
-    private Spinner categorySpinner;
     private Uri imagePath;
     private ImageView imageView;
     private static final int IMAGE_PICK_CODE = 1000;
@@ -45,17 +44,18 @@ public class EditThingsItem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_things_item);
 
+        TextView mandText = (TextView) findViewById(R.id.accountMandatoryText3);
+        mandText.setEnabled(false);
         saveButton = (Button) findViewById(R.id.saveThingsButton);
         setPicButton = (Button) findViewById(R.id.setThingsPicButton);
         nameText = (TextView) findViewById(R.id.nameThingsText);
         descriptionText = (TextView) findViewById(R.id.descriptionThingsText);
-        categorySpinner = (Spinner) findViewById(R.id.categoryThingsSpinner);
         imageView = (ImageView) findViewById(R.id.imageThingsView);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(EditThingsItem.this,
                 android.R.layout.simple_dropdown_item_1line,getResources().getStringArray(R.array.likeListCategory)); //simple_list_item_1
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        categorySpinner.setAdapter(adapter);
+
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,41 +99,11 @@ public class EditThingsItem extends AppCompatActivity {
     private void handleEditOrInsert(){
         Intent intent = getIntent();
         if (intent.getIntExtra("requestCode",-1)==START_EDIT_ACTIVITY){
-            /*Bundle bundle = intent.getExtras();
-            String name = (String) bundle.getSerializable("name");
-            String category = (String) bundle.getSerializable("category");
-            String description = (String) bundle.getSerializable("description");
-            //Bitmap bitmap = (Bitmap) bundle.getParcelable("image");
-            nameText.setText(name);
-            descriptionText.setText(description);
-            categorySpinner.setSelection(findPositionInCategory(category));
-            //imageView.setImageBitmap(bitmap);
-*/
             nameText.setText(intent.getStringExtra("name"));
-            categorySpinner.setSelection(findPositionInCategory(intent.getStringExtra("category")));
             descriptionText.setText(intent.getStringExtra("description"));
-            //imageView.setImageBitmap((Bitmap)intent.getParcelableExtra("image"));
             imageView.setVisibility(View.INVISIBLE);
             setPicButton.setVisibility(View.INVISIBLE);
         }
-    }
-
-    /**
-     * Finds the position of a string in category lsit (spinner).
-     *
-     * @param category string item of category list
-     * @return position of input in category list
-     */
-    private int findPositionInCategory(String category ){
-        String [] choices = getResources().getStringArray(R.array.likeListCategory);
-        int selectedPos =-1;
-        for (int i = 0; i < choices.length; i++){
-            if (category.equals(choices[i])){
-                selectedPos=i;
-                break;
-            }
-        }
-        return selectedPos;
     }
 
     /**
@@ -143,7 +113,6 @@ public class EditThingsItem extends AppCompatActivity {
         if (!constraintsViolation()) {
             boolean cameToEdit = getIntent().getIntExtra("requestCode",-1)==START_EDIT_ACTIVITY ;
             String name = nameText.getText().toString();
-            String category = categorySpinner.getSelectedItem().toString();
             String description = descriptionText.getText().toString();
             imageView.buildDrawingCache();
             Bitmap bitmap = imageView.getDrawingCache();
@@ -151,7 +120,6 @@ public class EditThingsItem extends AppCompatActivity {
             //make a bundle for objects
             Bundle bundle = new Bundle();
             bundle.putSerializable("name", name);
-            bundle.putSerializable("category", category);
             bundle.putSerializable("description", description);
             bundle.putParcelable("image", bitmap);
             bundle.putBoolean("cameToEdit", cameToEdit);
@@ -174,28 +142,8 @@ public class EditThingsItem extends AppCompatActivity {
     private boolean constraintsViolation() {
         boolean isNameEmpty = nameText.getText() == null || nameText.getText().length() == 0;
         if (isNameEmpty)
-            createPopupError(isNameEmpty);
+            Toast.makeText(EditThingsItem.this, "Please fill all mandatory fields", Toast.LENGTH_SHORT).show();
         return isNameEmpty;
-    }
-
-    /**
-     * Creates a popup alert box if name was empty.
-     *
-     * @param isNameEmpty if name text view is empty or not
-     */
-    private void createPopupError(boolean isNameEmpty){
-        AlertDialog.Builder builder = new AlertDialog.Builder(EditThingsItem.this);
-
-        builder.setTitle("Input Error");
-        builder.setMessage( (isNameEmpty) ? "Name field must be filled!" : "No Errors");
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel(); dialogInterface.dismiss();
-            }
-        });
-        builder.show();
     }
 
     /**
@@ -214,8 +162,6 @@ public class EditThingsItem extends AppCompatActivity {
             case PERMISSION_CODE:{
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                     pickImageFromGallery(); // permission was granted
-                else
-                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_SHORT).show();
             }
         }
     }

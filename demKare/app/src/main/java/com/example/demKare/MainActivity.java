@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         int appImg = getResources().getIdentifier("@drawable/ic_launcher_foreground", null, getPackageName());
         img.setImageDrawable(getResources().getDrawable(appImg));
 
+        TextView mandText = (TextView) findViewById(R.id.accountMandatoryText4);
+        mandText.setEnabled(false);
         //getSupportActionBar().hide();
     }
 

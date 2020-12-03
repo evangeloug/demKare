@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * A class for account information editing.
@@ -20,9 +21,10 @@ import android.widget.EditText;
  */
 public class EditAccount extends AppCompatActivity {
 
-    private EditText email, phone, username, password, passwordVerification;
+    private EditText email, phone, username, password, passwordVerification, mandatory;
     private EditText nameSurname, emailLabel, phoneLabel, usernameLabel, passwordLabel, passwordVerificationLabel;
     private Button save;
+    private int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class EditAccount extends AppCompatActivity {
         password = (EditText) findViewById(R.id.passwordText);
         passwordVerification = (EditText) findViewById(R.id.passwordVerificationText);
         nameSurname = (EditText) findViewById(R.id.nameSurnameText);
+        mandatory = (EditText) findViewById(R.id.accountMandatoryText);
         //nameSurname.setEnabled(false);
 
         //labels
@@ -45,6 +48,7 @@ public class EditAccount extends AppCompatActivity {
         passwordLabel = (EditText) findViewById(R.id.passwordLabel);
         passwordVerificationLabel = (EditText) findViewById(R.id.passwordVerificationLabel);
         //set all labels as non editable
+        mandatory.setEnabled(false);
         emailLabel.setEnabled(false);
         phoneLabel.setEnabled(false);
         usernameLabel.setEnabled(false);
@@ -73,6 +77,7 @@ public class EditAccount extends AppCompatActivity {
         username.setText(intent.getStringExtra("username"));
         password.setText(intent.getStringExtra("password"));
         passwordVerification.setText(intent.getStringExtra("password"));
+        index = intent.getIntExtra("index",-1);
     }
 
     /**
@@ -91,6 +96,7 @@ public class EditAccount extends AppCompatActivity {
             bundle.putSerializable("phone", phoneS);
             bundle.putSerializable("username", usernameS);
             bundle.putSerializable("password", passwordS);
+            bundle.putInt("index",index);
 
             Intent intent = new Intent();
             intent.putExtras(bundle);
@@ -134,34 +140,11 @@ public class EditAccount extends AppCompatActivity {
 
         boolean noneViolations = !emailEmpty && !phoneEmpty && !usernameEmpty && !passwordEmpty &&
                 !passwordVerificationEmpty && isPhoneNum && passMatch;
-        createPopupError(noneViolations,violations);
+
+        if(!noneViolations)
+            Toast.makeText(EditAccount.this, "Please fill all mandatory fields correctly", Toast.LENGTH_SHORT).show();
+
         return noneViolations;
     }
 
-    /**
-     * Creates a popup alert box if any violation of input was held.
-     *
-     * Violations: if any of the input fields is empty, or if phone doesn't contain only numbers
-     * or if password and its verification don't match.
-     *
-     * @param noneViolations if none violations exist
-     * @param violations errors-violations text to be displayed
-     */
-    private void createPopupError(boolean noneViolations, String violations){
-        if(!noneViolations) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(EditAccount.this);
-
-            builder.setTitle("Input Error");
-            builder.setMessage(violations);
-
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.cancel();
-                    dialogInterface.dismiss();
-                }
-            });
-            builder.show();
-        }
-    }
 }

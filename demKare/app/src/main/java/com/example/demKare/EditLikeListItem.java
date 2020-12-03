@@ -33,14 +33,13 @@ import android.widget.Toast;
 public class EditLikeListItem extends AppCompatActivity {
 
     private Button saveButton, setPicButton;
-    private TextView nameText, descriptionText;
+    private TextView nameText, descriptionText, mandatory;
     private Spinner categorySpinner;
     private Uri imagePath;
     private ImageView imageView;
     private static final int IMAGE_PICK_CODE = 1000;
     private static final int PERMISSION_CODE = 1001;
     private static final int START_EDIT_ACTIVITY=0;
-    private static final int START_INSERT_ACTIVITY=1;
 
 
     @Override
@@ -52,8 +51,11 @@ public class EditLikeListItem extends AppCompatActivity {
         setPicButton = (Button) findViewById(R.id.setPicButton);
         nameText = (TextView) findViewById(R.id.nameText);
         descriptionText = (TextView) findViewById(R.id.descriptionText);
+        mandatory = (TextView) findViewById(R.id.likedItemMandatory);
+        mandatory.setEnabled(false);
         categorySpinner = (Spinner) findViewById(R.id.categorySpinner);
         imageView = (ImageView) findViewById(R.id.imageView);
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(EditLikeListItem.this,
                 android.R.layout.simple_dropdown_item_1line,getResources().getStringArray(R.array.likeListCategory)); //simple_list_item_1
@@ -168,28 +170,8 @@ public class EditLikeListItem extends AppCompatActivity {
     private boolean constraintsViolation() {
         boolean isNameEmpty = nameText.getText() == null || nameText.getText().length() == 0;
         if (isNameEmpty)
-            createPopupError(isNameEmpty);
+            Toast.makeText(EditLikeListItem.this, "Please fill all mandatory fields", Toast.LENGTH_SHORT).show();
         return isNameEmpty;
-    }
-
-    /**
-     * Creates a popup alert box if name was empty.
-     *
-     * @param isNameEmpty if name text view is empty or not
-     */
-    private void createPopupError(boolean isNameEmpty){
-        AlertDialog.Builder builder = new AlertDialog.Builder(EditLikeListItem.this);
-
-        builder.setTitle("Input Error");
-        builder.setMessage( (isNameEmpty) ? "Name field must be filled!" : "No Errors");
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel(); dialogInterface.dismiss();
-            }
-        });
-        builder.show();
     }
 
     /**

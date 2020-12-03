@@ -230,13 +230,7 @@ public class ThingsList extends AppCompatActivity {
         Bitmap bitmap = image.getDrawingCache();
 
         Intent intent = new Intent(ThingsList.this, EditThingsItem.class);
-     /*   Bundle bundle = new Bundle();
-        bundle.putParcelable("image", bitmap);
-       // intent.putExtras(bundle);
-        //bundle.putBoolean("isInsertPressed", isInsertPressed);
-        bundle.putSerializable("name", title.getText().toString());
-        bundle.putSerializable("category", category.getText().toString());
-        bundle.putSerializable("description", description.getContentDescription().toString()); */
+
         intent.putExtra("name", title.getText());
         intent.putExtra("category", category.getText());
         intent.putExtra("description", description.getContentDescription().toString());

@@ -60,7 +60,7 @@ public class EditPatientList extends AppCompatActivity {
                         startActivityForResult(intent, 99);
                     }
 
-                    if(PatientList.patients.get(finalI).equals("petros33")) {
+                    else if(PatientList.patients.get(finalI).equals("petros33")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Petros Georgiou");
                         intent.putExtra("email", "petros33@gmail.com");
@@ -71,7 +71,7 @@ public class EditPatientList extends AppCompatActivity {
                         startActivityForResult(intent, 99);
                     }
 
-                    if(PatientList.patients.get(finalI).equals("kostas88")) {
+                    else if(PatientList.patients.get(finalI).equals("kostas88")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Konstantinos Kyriakou");
                         intent.putExtra("email", "kostas88@gmail.com");
@@ -84,7 +84,7 @@ public class EditPatientList extends AppCompatActivity {
                     }
 
 
-                    if(PatientList.patients.get(finalI).equals("alois2")) {
+                    else if(PatientList.patients.get(finalI).equals("alois2")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Andreas Loizou");
                         intent.putExtra("email", "alois2@gmail.com");
@@ -97,7 +97,7 @@ public class EditPatientList extends AppCompatActivity {
                     }
 
 
-                    if(PatientList.patients.get(finalI).equals("cpro")) {
+                    else if(PatientList.patients.get(finalI).equals("cpro")) {
                         Intent intent = new Intent(view.getContext(), EditAccount.class);
                         intent.putExtra("fullname", "Constantinos Prokopiou");
                         intent.putExtra("email", "cpro@gmail.com");

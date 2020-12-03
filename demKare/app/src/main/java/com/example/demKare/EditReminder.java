@@ -45,6 +45,8 @@ public class EditReminder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_reminder);
 
+        TextView mandText = (TextView) findViewById(R.id.accountMandatoryText2);
+        mandText.setEnabled(false);
         videoView = (VideoView) findViewById(R.id.videoView);
         setPicButton = (Button) findViewById(R.id.setPicButton);
         saveButton = (Button) findViewById(R.id.saveButton);
@@ -54,18 +56,9 @@ public class EditReminder extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (date.getText().toString().length() > 0 || time.getText().toString().length() > 0 || nameText.getText().toString().length() > 0 ||
+                if (date.getText().toString().length() == 0 || time.getText().toString().length() == 0 || nameText.getText().toString().length() == 0 ||
                         videoPath == null && getIntent().getIntExtra("requestCode", -1) == -1) {
-                    AlertDialog.Builder err = new AlertDialog.Builder(EditReminder.this);
-                    err.setTitle("All fields must be completed and video selected!!");
-                    err.setMessage("Please complete the uncompleted fields and/or select a video to continue");
-                    err.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-                    err.show();
+                    Toast.makeText(EditReminder.this, "Please fill all mandatory fields correctly", Toast.LENGTH_SHORT).show();
                 } else {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("name", nameText.getText().toString() + ", " + spinner.getSelectedItem().toString() + ", " +
@@ -91,8 +84,8 @@ public class EditReminder extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         if (handleRequestCode() == 1005) {//edit
-            videoView.setVisibility(View.GONE);
-            setPicButton.setVisibility(View.GONE);
+            videoView.setVisibility(View.INVISIBLE);
+            setPicButton.setVisibility(View.INVISIBLE);
         }
     }
 
