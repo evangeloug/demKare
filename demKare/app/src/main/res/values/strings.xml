@@ -46,12 +46,12 @@
     <string name="hiText">Hello</string>
     <string name="addButton">Add Button</string>
     <string name="editButton">Edit Button</string>
-    <string name="emailLabel">Email</string>
-    <string name="passwordVerificationLabel">Password Verification</string>
+    <string name="emailLabel">Email*</string>
+    <string name="passwordVerificationLabel">Password Verification*</string>
     <string name="editEmailText">e.g. example@domain.com</string>
-    <string name="editPasswordText">Password</string>
-    <string name="editPhoneText">Phone</string>
-    <string name="editUsernameText">Username</string>
+    <string name="editPasswordText">Password*</string>
+    <string name="editPhoneText">Phone*</string>
+    <string name="editUsernameText">Username*</string>
     <string name="deleteButton">Delete Button</string>
     <string name="setPicButton">Select Picture</string>
     <string name="nameMessage">Name*</string>
@@ -98,9 +98,9 @@ It can also be helpful to know how symptoms change over stages. Alzheimer’s an
         of Primary Degenerative Dementia, the Functional Assessment Staging Test, and the Clinical Dementia Rating</string>
     <string name="SAVE">SAVE</string>
     <string name="all_fields_are_mandatory">All fields are mandatory</string>
-    <string name="reminder_name">Reminder name</string>
-    <string name="date_dd_mm_yyyy">Date dd/mm/yyyy</string>
-    <string name="time_hh_mm">Time hh:mm</string>
+    <string name="reminder_name">Reminder name*</string>
+    <string name="date_dd_mm_yyyy">Date dd/mm/yyyy*</string>
+    <string name="time_hh_mm">Time hh:mm*</string>
     <string name="choose_video">Choose Video</string>
     <string-array name="categories">
         <item>General</item>
