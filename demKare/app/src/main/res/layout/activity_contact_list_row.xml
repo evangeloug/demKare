@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:id="@+id/PersonCLayout">
+
+
+    <TextView
+        android:id="@+id/PersonName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF"
+        android:inputType="none"
+        android:text="DEFAULT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/PersonCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:contentDescription="@string/callButton"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/PersonDeleteButton"
+        app:layout_constraintTop_toBottomOf="@+id/PersonPhone"
+        app:rippleColor="#FFFFFF"
+        app:backgroundTint="#8BC34A"
+        app:srcCompat="@drawable/ic_phone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/PersonEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:contentDescription="@string/editButton"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/PersonDeleteButton"
+        app:layout_constraintTop_toBottomOf="@+id/PersonCallButton"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/PersonDeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/deleteButton"
+        android:focusable="true"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PersonCallButton"
+        app:srcCompat="@drawable/ic_baseline_delete_forever" />
+
+    <ImageView
+        android:id="@+id/PersonImage"
+        android:layout_width="225dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/rememberedPersonImg"
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.541"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PersonEditButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PersonName"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/PersonRelationship"
+        android:textSize="18sp"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/PersonImage"
+        app:layout_constraintTop_toBottomOf="@+id/PersonName"/>
+
+    <TextView
+        android:id="@+id/PersonPhone"
+        android:textSize="15sp"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PersonImage"
+        app:layout_constraintTop_toBottomOf="@+id/PersonRelationship" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

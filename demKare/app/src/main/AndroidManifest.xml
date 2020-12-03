@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demKare">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DemKare">
+        <activity android:name=".Contacts"></activity>
+        <activity android:name=".EditAccount"></activity>
+        <activity android:name=".EditContacts"></activity>
+        <activity android:name=".EditLikeListItem"></activity>
+        <activity android:name=".EditPatientList"></activity>
+        <activity android:name=".EditPeopleToRemember"></activity>
+        <activity android:name=".EditReminder"></activity>
+        <activity android:name=".EditThingsItem"></activity>
+        <activity android:name=".LikeList"></activity>
+        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".PatientList"></activity>
+        <activity android:name=".PeopleToRemember"></activity>
+        <activity android:name=".ReadAboutDementia"></activity>
+        <activity android:name=".ReminderList"></activity>
+        <activity android:name=".Sign_up"></activity>
+        <activity android:name=".TestEvaluation"></activity>
+        <activity android:name=".ThingsList"></activity>
+        <activity android:name=".VideoInfo"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
