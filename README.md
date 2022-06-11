@@ -232,4 +232,3 @@ Layouts are saved under: demKare/app/src/main/res/layout/\
 Images and drawables are saved under: demKare/app/src/main/res/drawable/\
 Videos are saved under: demKare/app/src/main/res/raw/\
 String values are saved in: demKare/app/src/main/res/values/strings.xml
-
